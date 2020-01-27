@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>formulaire 3</title>
+</head>
+<body>
+    <script>
+    function validationFormulaire() {
+        var nom = document.forms["fomulaire"]["nomFormulaire"];
+        var email = document.forms["fomulaire"]["emailformulaire"];
+        var sms = document.forms["fomulaire"]["smsformulaire"];
+
+        if (nom == "" || email == ""  || sms == "" == false) {
+          alert("veuillez remplir tous les champs de saisi,merci!");
+        }
+      }
+      </script>
+      <div class="formulaire">
+      <form name="fomulaire" onsubmit="return validationFormulaire()" method="post">
+        <legend>FORMULAIRE DE CONTACT VERIFICATION DES CHAMPS AVEC UN SEULE ALERT</legend><br>
+        <label for="">Nom:</label><br><br>
+           <input type="text" name="nomFormulaire" class="input"><br> <br>
+           <label for="">EMAIL :</label><br><br>
+          <input type="text" name="emailformulaire" class="input"><br><br>
+          <label for="">MESSAGE :</label><br><br>
+         <textarea name="sms" class="input"></textarea> <br><br>
+          <input type="submit" value="Envoyer">
+        </form>
+      </div>
+</body>
+</html>

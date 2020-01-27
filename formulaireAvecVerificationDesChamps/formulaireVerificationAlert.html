@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>formulaire 2</title>
+</head>
+<body>
+    <div class="formulaire">
+        <form action="">
+            <legend>FORMULAIRE DE CONTACT AVEC VERIFICATION DES CHAMPS AVEC PLUSIEURS ALERT</legend><br>
+            <label for="">NOM et PRENOM:</label> <br><br>
+            <input type="text" id="nom_prenom" class="input"><br><br>
+            <label for="" >EMAIL :</label> <br> <br>
+            <input type="text" id="email" class="input"><br><br>
+            <label for="">MESSAGE :</label> <br><br>
+            <textarea name="" id="sms" class="input"></textarea> <br><br>
+            <input type="submit">
+        </form>
+        <script>
+                document.forms[0].addEventListener("submit", function(evenement) { 
+                if (document.getElementById("nom_prenom").value == "") {
+                evenement.preventDefault();
+                alert("veuillez entrez votre nom et prenom");
+                
+                }
+                else if (document.getElementById("email").value == "") {
+                    evenement.preventDefault();
+                    alert("veuillez entrez votre email");
+                    
+                }
+                else if (document.getElementById("sms").value == "") {
+                    evenement.preventDefault();
+                    alert("veuillez rediger un petit message");
+                    
+                }
+
+                    });
+        </script>
+    </div>
+</body>
+</html>
